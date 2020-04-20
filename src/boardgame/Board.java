@@ -13,20 +13,27 @@ public class Board {
 	
 	}
 
-	protected int getRows() {
+	public int getRows() {
 		return rows;
 	}
 
-	protected void setRows(int rows) {
+	public void setRows(int rows) {
 		this.rows = rows;
 	}
 
-	protected int getColumns() {
+	public int getColumns() {
 		return columns;
 	}
 
-	protected void setColumns(int columns) {
+	public void setColumns(int columns) {
 		this.columns = columns;
 	}
 	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	public Piece piece(Position position) {
+		return pieces [position.getRow()][position.getColumn()];
+	}
 }
